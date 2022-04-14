@@ -21,7 +21,8 @@ config :logger, level: :info
 #
 #     config :auth_tutorial_phoenix, AuthTutorialPhoenixWeb.Endpoint,
 #       ...,
-#       url: [host: "example.com", port: 443],
+url: [scheme: "https", host: "hrms.herokuapp.com", port: 443],
+force_ssl: [rewrite_on: [:x_forwarded_proto]],
 #       https: [
 #         ...,
 #         port: 443,
